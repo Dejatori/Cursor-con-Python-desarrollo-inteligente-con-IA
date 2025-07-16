@@ -1,0 +1,3 @@
+Este es un archivo de prueba: notas_reunion.txt
+Contenido generado automáticamente para demostrar el organizador.
+Notas de la reunión de ayer

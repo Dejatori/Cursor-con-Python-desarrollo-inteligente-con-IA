@@ -1,0 +1,13 @@
+# Editor de Notas - Dependencias
+# Este proyecto utiliza solo librerías estándar de Python
+
+# No se requieren dependencias externas
+# Las siguientes librerías están incluidas en Python estándar:
+# - tkinter (interfaz gráfica)
+# - os (operaciones del sistema)
+# - No se requieren instalaciones adicionales
+
+# Para ejecutar la aplicación:
+# python notas.py
+
+# Versión mínima de Python requerida: 3.10 

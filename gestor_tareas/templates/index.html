@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Tareas</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 0.5em; }
+        .hecho { text-decoration: line-through; color: gray; }
+        form { margin-top: 2em; }
+    </style>
+</head>
+<body>
+    <h1>Gestor de Tareas</h1>
+    <ul>
+        {% for tarea in tareas %}
+            <li>
+                <span class="{% if tarea['hecho'] %}hecho{% endif %}">{{ tarea['texto'] }}</span>
+                {% if not tarea['hecho'] %}
+                    <a href="/completar/{{ tarea['id'] }}">Completar</a>
+                {% else %}
+                    <span>✔️</span>
+                {% endif %}
+            </li>
+        {% else %}
+            <li>No hay tareas.</li>
+        {% endfor %}
+    </ul>
+    <form action="/agregar" method="post">
+        <input type="text" name="texto" placeholder="Nueva tarea" required>
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>
